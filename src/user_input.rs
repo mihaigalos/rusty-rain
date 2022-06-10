@@ -15,6 +15,18 @@ pub fn user_input(
                     == event::KeyEvent::new(event::KeyCode::Char('c'), event::KeyModifiers::CONTROL)
                     || keyevent
                         == event::KeyEvent::new(event::KeyCode::Esc, event::KeyModifiers::NONE)
+                    || keyevent
+                        == event::KeyEvent::new(
+                            event::KeyCode::Backspace,
+                            event::KeyModifiers::NONE,
+                        )
+                    || keyevent
+                        == event::KeyEvent::new(event::KeyCode::Enter, event::KeyModifiers::NONE)
+                    || keyevent
+                        == event::KeyEvent::new(
+                            event::KeyCode::Char(' '),
+                            event::KeyModifiers::NONE,
+                        )
                 {
                     return Ok(false);
                 }
